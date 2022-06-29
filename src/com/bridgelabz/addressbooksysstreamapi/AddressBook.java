@@ -10,7 +10,7 @@ public class AddressBook {
 	 * Scanner Class And Printing The Contact Details Of Person
 	 */
 
-	ContactDetails person = new ContactDetails();
+	ContactDetails contact = new ContactDetails();
 	List<ContactDetails> contactDetailsList = new ArrayList<>();
 
 	public void addContact() {
@@ -22,7 +22,7 @@ public class AddressBook {
 //            checking the duplicate contact by contact name.
 			System.out.println("Enter the first name of person");
 			String fName = scanner.next();
-			if (fName.equals(person.getFirstName())) {
+			if (fName.equals(contact.getFirstName())) {
 				System.out.println("The entered person is already exist. Enter new name");
 			} else {
 				System.out.println("Enter the contact details of person ");
@@ -50,8 +50,8 @@ public class AddressBook {
 		long mobileNumber = scanner.nextLong();
 		System.out.println("Enter EmailId : ");
 		String emailId = scanner.next();
-		person = new ContactDetails(firstName, lastName, address, city, state, zipCode, mobileNumber, emailId);
-		contactDetailsList.add(person);
+		contact = new ContactDetails(firstName, lastName, address, city, state, zipCode, mobileNumber, emailId);
+		contactDetailsList.add(contact);
 	}
 
 	public void searchByName(String name) {
